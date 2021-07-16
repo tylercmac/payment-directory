@@ -1,7 +1,17 @@
 .payee-name {
   font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .detail-card {
   margin-bottom: 2rem;
+}
+
+.my-hr {
+  height: 1px;
+  margin: .5rem 0;
+  color: inherit;
+  background-color: currentColor;
+  border: 0;
+  opacity: .25;
 }

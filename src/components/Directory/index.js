@@ -103,7 +103,7 @@ export default function Directory() {
               Payee
             </th>
             <th scope="col" className="column" onClick={sortDate}>
-              Sub. Date
+              Subm. Date
             </th>
             <th scope="col">Phone</th>
             <th className="desktop-view" scope="col">Fax</th>

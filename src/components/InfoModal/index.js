@@ -14,26 +14,24 @@ export default function InfoModal({ Payee, Payment }) {
         <Row className="payee-name text-success justify-content-center">
           {formatName}
         </Row>
-        <Row className="text-secondary justify-content-center mb-2">
-          Submitted {Moment(Payee.SubmissionDate).format("M/DD/YYYY")}
-        </Row>
         <Col xs={12} md={6}>
           <Row>
             <Card className="detail-card">
               <Card.Body>
                 <Card.Title>Contact Info</Card.Title>
+                <div className="my-hr" />
                 <Card.Text>
-                  <Row>
+                  <Row className="my-row">
                     <span className="text-danger">Attention: </span>
-                    {Payee.Attention}
+                    <span>{Payee.Attention}</span>
                   </Row>
-                  <Row>
+                  <Row className="my-row">
                     <span className="text-danger">Phone: </span>
-                    {Payee.Phone}
+                    <span>{Payee.Phone}</span>
                   </Row>
-                  <Row>
+                  <Row className="my-row">
                     <span className="text-danger">Fax: </span>
-                    {Payee.Fax}
+                    <span>{Payee.Fax}</span>
                   </Row>
                 </Card.Text>
               </Card.Body>
@@ -42,13 +40,14 @@ export default function InfoModal({ Payee, Payment }) {
             <Card className="detail-card">
               <Card.Body>
                 <Card.Title>Address</Card.Title>
+                <div className="my-hr" />
                 <Card.Text>
-                  <Row>{`${Payee.Address.Address1} ${Payee.Address.Address2}`}</Row>
-                  <Row>{`${Payee.Address.City}, ${Payee.Address.StateOrProvince} ${Payee.Address.PostalCode}`}</Row>
-                  <Row>
+                  <Row><span>{`${Payee.Address.Address1} ${Payee.Address.Address2}`}</span></Row>
+                  <Row><span>{`${Payee.Address.City}, ${Payee.Address.StateOrProvince} ${Payee.Address.PostalCode}`}</span></Row>
+                  <Row><span>
                     {Payee.Address.Country === "US"
                       ? "United States"
-                      : Payee.Address.Country}
+                      : Payee.Address.Country}</span>
                   </Row>
                 </Card.Text>
               </Card.Body>
@@ -60,10 +59,11 @@ export default function InfoModal({ Payee, Payment }) {
           <Card className="detail-card">
             <Card.Body>
               <Card.Title>Payment Details</Card.Title>
+              <div className="my-hr" />
               <Card.Text>
                 <Row>
                   <span className="text-danger">Card Number: </span>
-                  {Payment.PAN}
+                  <span>{Payment.PAN}</span>
                 </Row>
                 <Row>
                   <Col xs={6}>

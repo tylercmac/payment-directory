@@ -4,7 +4,7 @@ import InfoModal from '../InfoModal'
 import RemitModal from "../RemitModal";
 
 export default function Popup(props) {
-  const [key, setKey] = useState('info');
+  const [key, setKey] = useState('remittance');
 
 
   return (
@@ -26,11 +26,11 @@ export default function Popup(props) {
             onSelect={(k) => setKey(k)}
             className="mb-3"
           >
-            <Tab eventKey="info" title="Payee Info">
-              <InfoModal {...props} />
-            </Tab>
-            <Tab eventKey="remittance" title="Remittance">
+            <Tab eventKey="remittance" title="Invoices">
               <RemitModal {...props} />
+            </Tab>
+            <Tab eventKey="info" title="Info">
+              <InfoModal {...props} />
             </Tab>
           </Tabs>
 
