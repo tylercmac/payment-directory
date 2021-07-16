@@ -1,0 +1,11 @@
+@media (max-width: 768px) {
+  .desktop-view {
+    display: none;
+  }
+}
+
+@media (max-width: 1290px) {
+  .wide-view {
+    display: none;
+  }
+}
