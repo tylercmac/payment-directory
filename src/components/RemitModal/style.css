@@ -4,6 +4,7 @@
 
 .my-row {
   width: 100%;
+  justify-content: flex-start
 }
 
 .payee-name {
@@ -31,6 +32,11 @@
 .payor-name {
   font-weight: 500;
   font-size: 1.7rem;
+  padding: 0 !important;
+}
+
+.invoice-num {
+  padding: 0 !important;
 }
 
 .payor-id {

@@ -5,19 +5,29 @@
 
 .detail-card {
   margin-bottom: 1.5rem;
-  width: 97% !important;
+  width: 97%;
 }
 
 .info-col {
-  margin-bottom: .3rem !important;
+  margin-bottom: .3rem;
+  padding: 0 .2rem;
+  
+}
+
+.pay-info {
+  padding: 0 .2rem;
+}
+
+.cvv {
+  padding: 0;
 }
 
 .contact-info {
-  margin-bottom: .3rem !important;
+  margin-bottom: 1rem;
 }
 
 .payment {
-  margin-bottom: 2rem !important;
+  margin-bottom: 2rem;
 }
 
 .my-hr {
@@ -29,6 +39,10 @@
   opacity: .25;
 }
 
+.tag {
+  margin-right: .5rem;
+}
+
 .my-col {
-  padding-right: 0 !important;
+  padding-right: 0;
 }

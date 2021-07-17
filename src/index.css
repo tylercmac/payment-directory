@@ -18,13 +18,28 @@ code {
   box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.16) !important;
 }
 
+.row {
+  width: 100% !important;
+  margin: 0 !important;
+  /* justify-content: center; */
+}
+
 @media (max-width: 576px) {
+    .close-up {
+      top: .4rem !important;
+    }
+    .container {
+      padding: 0 !important;
+    }
     .detail-card {
       margin-bottom: 0 !important;
       border-bottom: 1px solid !important;
       border-radius: 0 !important;
       border-right: none !important;
       border-left: none !important;
+    }
+    .info-col {
+      margin-bottom: 0 !important;
     }
     .modal-dialog {
       width: 100% !important;
@@ -35,7 +50,7 @@ code {
     }
     .remit-row {
       padding: 0 !important;
-      width: 96% !important;
+      /* width: 96% !important; */
       margin-bottom: .3rem;
     }
     .remit-container {

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Modal, Tabs, Tab, Button } from "react-bootstrap";
+import { Modal, Tabs, Tab } from "react-bootstrap";
 import InfoModal from "../InfoModal";
 import RemitModal from "../RemitModal";
 import "./style.css";
@@ -19,13 +19,13 @@ export default function Popup(props) {
         {/* <Modal.Header></Modal.Header> */}
 
         <Modal.Body className="modal-body">
-            <Button
+            <button
               variant="outline-danger"
-              className="close"
+              className="close-up btn btn-outline-danger"
               onClick={() => props.setShow(false)}
             >
               <span aria-hidden="true">CLOSE</span>
-            </Button>
+            </button>
           <Tabs
             id="controlled-tab-example"
             activeKey={key}

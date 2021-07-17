@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
+import stateAbbr from "../stateAbbr"
 import "./style.css";
 
 export default function InfoModal({ Payee, Payment }, props) {
@@ -21,22 +22,22 @@ export default function InfoModal({ Payee, Payment }, props) {
                 <div className="my-hr" />
                 <div>
                   <Row className="my-row mb-1">
-                    <span className="text-danger">Attention: </span>
+                    <span className="text-danger tag">Attention: </span>
                     <span>{Payee.Attention}</span>
                   </Row>
                   <Row className="my-row mb-1">
-                    <span className="text-danger">Phone: </span>
+                    <span className="text-danger tag">Phone: </span>
                     <span>{Payee.Phone}</span>
                   </Row>
                   <Row className="my-row mb-1">
-                    <span className="text-danger">Fax: </span>
+                    <span className="text-danger tag">Fax: </span>
                     <span>{Payee.Fax}</span>
                   </Row>
                 </div>
               </Card.Body>
             </Card>
             <br />
-            <Card className="detail-card">
+            <Card className="detail-card address">
               <Card.Body>
                 <Card.Title>Address</Card.Title>
                 <div className="my-hr" />
@@ -45,7 +46,7 @@ export default function InfoModal({ Payee, Payment }, props) {
                     <span>{`${Payee.Address.Address1} ${Payee.Address.Address2}`}</span>
                   </Row>
                   <Row>
-                    <span>{`${Payee.Address.City}, ${Payee.Address.StateOrProvince} ${Payee.Address.PostalCode}`}</span>
+                    <span>{`${Payee.Address.City}, ${stateAbbr(Payee.Address.StateOrProvince, 'abbr')} ${Payee.Address.PostalCode}`}</span>
                   </Row>
                   <Row>
                     <span>
@@ -60,7 +61,7 @@ export default function InfoModal({ Payee, Payment }, props) {
           </Row>
         </Col>
 
-        <Col xs={12} md={6}>
+        <Col xs={12} md={6} className="pay-info">
           <Row className="justify-content-center">
             <Card className="detail-card payment">
               <Card.Body>
@@ -71,12 +72,12 @@ export default function InfoModal({ Payee, Payment }, props) {
                     <span className="text-danger">Card Number: </span>
                     <span>{Payment.PAN}</span>
                   </div>
-                  <Row className="my-row mb-1">
-                    <Col xs={6} className="mb-1">
+                  <Row className="my-row mb-2">
+                    <Col xs={6} className="mb-1 cvv">
                       <span className="text-danger">CVV: </span>
                       {Payment.CVV}
                     </Col>
-                    <Col md={12} lg={6} className="my-col">
+                    <Col md={12} lg={6} className="my-col cvv">
                       <span className="text-danger">Exp Date: </span>
                       {Payment.Exp}
                     </Col>

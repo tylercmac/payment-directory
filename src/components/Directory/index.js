@@ -3,6 +3,7 @@ import Search from "../Search";
 import Payee from "../Payee";
 import API from "../../utils/payees.json";
 import Moment from "moment";
+import stateAbbr from "../stateAbbr"
 import "./style.css";
 
 export default function Directory() {
@@ -114,7 +115,7 @@ export default function Directory() {
               name={payee.Payee.Name}
               phone={payee.Payee.Phone}
               fax={payee.Payee.Fax}
-              state={payee.Payee.Address.StateOrProvince}
+              state={stateAbbr(payee.Payee.Address.StateOrProvince, 'abbr')}
               city={payee.Payee.Address.City}
               subDate={payee.Payee.SubmissionDate}
               {...payee}
