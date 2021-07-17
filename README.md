@@ -1,6 +1,6 @@
 # Vendor Directory
 
-[Find the live site here](https://github.com/facebook/create-react-app).
+[Find the live site here](https://vendor-directory-proj.herokuapp.com/).
 
 ## How to use:
 
@@ -13,7 +13,7 @@ You can also have a more detailed look at the vendor info in the popup.
 ##
 ![main screenshot](/public/vendormain.png)
 ##
-![modal screenshot]/public/vendor2.png)
+![modal screenshot](/public/vendor2.png)
 ##
 ![modal two screenshot](/public/vendor3.png)
 
