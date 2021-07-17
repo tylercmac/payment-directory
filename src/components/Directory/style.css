@@ -1,5 +1,4 @@
 .column:hover {
-  /* color: grey; */
   background-color: rgb(202, 220, 255);
   transition: .2s ease-in-out;
   cursor: pointer;
