@@ -4,8 +4,20 @@
 }
 
 .detail-card {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   width: 97% !important;
+}
+
+.info-col {
+  margin-bottom: .3rem !important;
+}
+
+.contact-info {
+  margin-bottom: .3rem !important;
+}
+
+.payment {
+  margin-bottom: 2rem !important;
 }
 
 .my-hr {

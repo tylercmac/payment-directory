@@ -13,9 +13,9 @@ export default function InfoModal({ Payee, Payment }, props) {
         <Row className="payee-name text-success justify-content-center">
           {formatName}
         </Row>
-        <Col xs={12} md={6} className="">
+        <Col xs={12} md={6} className="info-col">
           <Row className="justify-content-center">
-            <Card className="detail-card">
+            <Card className="detail-card contact-info">
               <Card.Body>
                 <Card.Title>Contact Info</Card.Title>
                 <div className="my-hr" />
@@ -62,7 +62,7 @@ export default function InfoModal({ Payee, Payment }, props) {
 
         <Col xs={12} md={6}>
           <Row className="justify-content-center">
-            <Card className="detail-card">
+            <Card className="detail-card payment">
               <Card.Body>
                 <Card.Title>Payment Details</Card.Title>
                 <div className="my-hr" />

@@ -35,7 +35,8 @@ code {
     }
     .remit-row {
       padding: 0 !important;
-      width: 97% !important;
+      width: 96% !important;
+      margin-bottom: .3rem;
     }
     .remit-container {
       padding: 0 !important;
