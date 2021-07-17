@@ -11,10 +11,10 @@ Once you've found the vendor, simply click on it, and view all the invoices for 
 ##
 You can also have a more detailed look at the vendor info in the popup.
 ##
-![main screenshot](public\vendormain.png)
+![main screenshot](/public/vendormain.png)
 ##
-![modal screenshot](public\vendor2.png)
+![modal screenshot]/public/vendor2.png)
 ##
-![modal two screenshot](public\vendor3.png)
+![modal two screenshot](/public/vendor3.png)
 
 
