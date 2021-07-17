@@ -3,7 +3,7 @@ import './style.css'
 
 export default function Search(props) {
   return (
-    <div>
+    <div className="search-box">
       <div className="my-search">
         <input
           name="search"

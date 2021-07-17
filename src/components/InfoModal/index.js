@@ -19,7 +19,7 @@ export default function InfoModal({ Payee, Payment }, props) {
               <Card.Body>
                 <Card.Title>Contact Info</Card.Title>
                 <div className="my-hr" />
-                <Card.Text>
+                <div>
                   <Row className="my-row mb-1">
                     <span className="text-danger">Attention: </span>
                     <span>{Payee.Attention}</span>
@@ -32,7 +32,7 @@ export default function InfoModal({ Payee, Payment }, props) {
                     <span className="text-danger">Fax: </span>
                     <span>{Payee.Fax}</span>
                   </Row>
-                </Card.Text>
+                </div>
               </Card.Body>
             </Card>
             <br />
@@ -40,7 +40,7 @@ export default function InfoModal({ Payee, Payment }, props) {
               <Card.Body>
                 <Card.Title>Address</Card.Title>
                 <div className="my-hr" />
-                <Card.Text>
+                <div>
                   <Row>
                     <span>{`${Payee.Address.Address1} ${Payee.Address.Address2}`}</span>
                   </Row>
@@ -54,7 +54,7 @@ export default function InfoModal({ Payee, Payment }, props) {
                         : Payee.Address.Country}
                     </span>
                   </Row>
-                </Card.Text>
+                </div>
               </Card.Body>
             </Card>
           </Row>
@@ -66,22 +66,22 @@ export default function InfoModal({ Payee, Payment }, props) {
               <Card.Body>
                 <Card.Title>Payment Details</Card.Title>
                 <div className="my-hr" />
-                <Card.Text>
-                  <Row className="mb-1">
+                <div>
+                  <div className="my-row mb-2">
                     <span className="text-danger">Card Number: </span>
                     <span>{Payment.PAN}</span>
-                  </Row>
-                  <Row className="mb-1">
+                  </div>
+                  <Row className="my-row mb-1">
                     <Col xs={6} className="mb-1">
                       <span className="text-danger">CVV: </span>
                       {Payment.CVV}
                     </Col>
-                    <Col md={12} lg={6}>
+                    <Col md={12} lg={6} className="my-col">
                       <span className="text-danger">Exp Date: </span>
                       {Payment.Exp}
                     </Col>
                   </Row>
-                </Card.Text>
+                </div>
               </Card.Body>
             </Card>
           </Row>

@@ -4,6 +4,13 @@ import Moment from "moment";
 import "./style.css";
 
 export default function RemitModal({ Payee, Remittance }) {
+
+  let sortedInvoice = Remittance.sort((a, b) => {
+    if (a.InvoiceNo > b.InvoiceNo) {
+      return -1; 
+    } else return 1;
+  })
+
   let totalOwed = 0;
   for (let i = 0; i < Remittance.length; i++) {
     let amnt = Remittance[i].Amount.substr(1);
@@ -23,32 +30,29 @@ export default function RemitModal({ Payee, Remittance }) {
         <Row className="payee-name text-success justify-content-center">
           {formatName}
         </Row>
-        <Row className="text-info justify-content-center mb-2">
+        <Row className="text-primary justify-content-center mb-2">
           Total Owed: ${totalOwed}
         </Row>
         <Row className="text-secondary justify-content-center mb-2">
           Submitted {Moment(Payee.SubmissionDate).format("M/DD/YYYY")}
         </Row>
-        {Remittance.map((remitter) => (
+        {sortedInvoice.map((remitter) => (
           <Row key={remitter.PayorName} className="remit-row">
             <Card className="detail-card">
-              <Card.Body>
+              <Card.Body className="card-body">
                 <Row>
-                  <Col className="payor-name" xs={6}>{remitter.PayorName}</Col>
+                  <Col className="invoice-num text-danger" xs={6}>Invoice #: {remitter.InvoiceNo}</Col>
                   <Col className="payor-id text-primary" xs={6}>ID: {remitter.PayorId}</Col>
                 </Row>
-                <div className="descript">{remitter.Description}</div>
+                <Col className="payor-name" xs={12}><span className="text-secondary">Payor: </span>{remitter.PayorName}</Col>
+                <div className="descript text-secondary">{remitter.Description}</div>
                 <div className="my-hr" />
-                <Card.Text>
+                <div>
                   <div className="my-row">
-                    <span className="text-danger">Invoice #: </span>
-                    <span>{remitter.InvoiceNo}</span>
-                  </div>
-                  <div className="my-row">
-                    <span className="text-danger">Payment Total: </span>
+                    <span className="text-success">Payment Total: </span>
                     <span>{remitter.Amount}</span>
                   </div>
-                </Card.Text>
+                </div>
               </Card.Body>
             </Card>
           </Row>

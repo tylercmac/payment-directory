@@ -18,7 +18,7 @@ export default function Popup(props) {
       >
         {/* <Modal.Header></Modal.Header> */}
 
-        <Modal.Body>
+        <Modal.Body className="modal-body">
             <Button
               variant="outline-danger"
               className="close"

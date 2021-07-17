@@ -9,6 +9,15 @@ code {
   font-family: 'Mulish', sans-serif;
 }
 
+.table-striped>tbody>tr:nth-of-type(odd) {
+  --bs-table-accent-bg: rgb(224, 241, 255) !important;
+  color: var(--bs-table-striped-color);
+}
+
+.card {
+  box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.16) !important;
+}
+
 @media (max-width: 576px) {
     .detail-card {
       margin-bottom: 0 !important;
@@ -26,15 +35,24 @@ code {
     }
     .remit-row {
       padding: 0 !important;
-      justify-content: center !important;
-    }
-    .main-remit-row {
-      justify-content: center !important;
+      width: 97% !important;
     }
     .remit-container {
       padding: 0 !important;
     }
     .descript {
       font-size: .8rem
+    }
+    .my-row {
+      margin-bottom: 0 !important;
+    }
+    .lead {
+      font-size: 1rem !important;
+    }
+    .card-body {
+      padding: .5rem !important;
+    }
+    .modal-body {
+      padding: .5rem 0 !important;
     }
 }

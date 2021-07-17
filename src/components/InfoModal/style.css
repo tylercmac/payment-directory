@@ -16,3 +16,7 @@
   border: 0;
   opacity: .25;
 }
+
+.my-col {
+  padding-right: 0 !important;
+}

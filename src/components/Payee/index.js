@@ -16,7 +16,7 @@ export default function Employee(props) {
       <Popup show={show} setShow={setShow} name={formatName} {...props} />
       <tr className="vendor-row" onClick={() => setShow(true)}>
         <th scope="" className="text-success px-3">{formatName}</th>
-        <td className="text-info">{Moment(props.subDate).format("M-DD-YYYY")}</td>
+        <td className="text-primary">{Moment(props.subDate).format("M-DD-YYYY")}</td>
         <td>{props.phone}</td>
         <td className="desktop-view">{props.fax}</td>
         <td className="wide-view">{props.Payee.Attention}</td>

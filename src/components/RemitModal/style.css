@@ -7,7 +7,8 @@
 }
 
 .payee-name {
-  font-size: 3rem;
+  font-size: 4rem;
+  margin-bottom: 0 !important;
 }
 
 .payee-id {
@@ -29,10 +30,18 @@
 
 .payor-name {
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
 }
 
 .payor-id {
   font-weight: 200;
   text-align: end;
+}
+
+.remit-row {
+  justify-content: center;
+  font-weight: 300;
+}
+.main-remit-row {
+  justify-content: center;;
 }
