@@ -1,13 +1,40 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Mulish', sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'Mulish', sans-serif;
+}
+
+@media (max-width: 576px) {
+    .detail-card {
+      margin-bottom: 0 !important;
+      border-bottom: 1px solid !important;
+      border-radius: 0 !important;
+      border-right: none !important;
+      border-left: none !important;
+    }
+    .modal-dialog {
+      width: 100% !important;
+      margin: 0 !important;
+    }
+    .vendor-popup {
+      padding: 0 !important;
+    }
+    .remit-row {
+      padding: 0 !important;
+      justify-content: center !important;
+    }
+    .main-remit-row {
+      justify-content: center !important;
+    }
+    .remit-container {
+      padding: 0 !important;
+    }
+    .descript {
+      font-size: .8rem
+    }
 }

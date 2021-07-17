@@ -1,0 +1,22 @@
+.modal-header {
+  justify-content: flex-end !important;
+}
+
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 650px !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .modal-lg,
+  .modal-xl {
+    max-width: 800px !important;
+  }
+}

@@ -11,12 +11,9 @@ export default function Directory() {
   const [filteredPayees, setFilteredPayees] = useState([]);
   const [isFiltered, setIsFiltered] = useState(false);
 
+
   useEffect(() => {
     setPayees(API);
-    // const results = API.map((payee) =>
-    //   Moment(payee.Payee.SubmissionDate).format("MM/DD/YYYY")
-    // );
-    // console.log(results);
     setFilteredPayees(API);
   }, []);
 
@@ -32,8 +29,6 @@ export default function Directory() {
   };
 
   const sortName = () => {
-    // const name = event.target.getAttribute('name');
-    // if (name === 'first') {
     if (!isFiltered) {
       setFilteredPayees(() => {
         return filteredPayees.sort((a, b) => {
@@ -96,14 +91,14 @@ export default function Directory() {
   return (
     <div>
       <Search value={search} handleInputChange={handleInputChange} />
-      <table className="table table-striped">
+      <table className="table table-striped pl-2">
         <thead>
           <tr>
-            <th scope="col" className="column" name="Payee" onClick={sortName}>
-              Payee
+            <th scope="col" className="column px-3" name="Payee" onClick={sortName}>
+              Vendor
             </th>
             <th scope="col" className="column" onClick={sortDate}>
-              Subm. Date
+              Submitted
             </th>
             <th scope="col">Phone</th>
             <th className="desktop-view" scope="col">Fax</th>
@@ -115,6 +110,7 @@ export default function Directory() {
         <tbody>
           {filteredPayees.map((payee) => (
             <Payee
+              key={payee.Payee.Name}
               name={payee.Payee.Name}
               phone={payee.Payee.Phone}
               fax={payee.Payee.Fax}

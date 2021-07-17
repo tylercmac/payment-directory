@@ -1,9 +1,8 @@
 .column:hover {
-  color: grey;
-  background-color: rgb(240, 236, 236);
-}
-.column:active {
-  border: 1px solid black;
+  /* color: grey; */
+  background-color: rgb(231, 231, 231);
+  transition: .2s ease-in-out;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {

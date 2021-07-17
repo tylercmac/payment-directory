@@ -11,15 +11,15 @@ export default function RemitModal({ Payee, Remittance }) {
     totalOwed += amnt;
   }
 
-  totalOwed = totalOwed.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+  totalOwed = totalOwed.toFixed(2).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
 
   const formatName =
     Payee.Name.charAt(0) +
     Payee.Name.substr(1, Payee.Name.length - 1).toLowerCase();
 
   return (
-    <Container>
-      <Row>
+    <Container className="remit-container">
+      <Row className="main-remit-row">
         <Row className="payee-name text-success justify-content-center">
           {formatName}
         </Row>
@@ -30,7 +30,7 @@ export default function RemitModal({ Payee, Remittance }) {
           Submitted {Moment(Payee.SubmissionDate).format("M/DD/YYYY")}
         </Row>
         {Remittance.map((remitter) => (
-          <Row>
+          <Row key={remitter.PayorName} className="remit-row">
             <Card className="detail-card">
               <Card.Body>
                 <Row>

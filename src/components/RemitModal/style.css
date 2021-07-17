@@ -10,6 +10,10 @@
   font-size: 3rem;
 }
 
+.payee-id {
+  font-weight: 300;
+}
+
 .my-hr {
   height: 1px;
   margin: .5rem 0;
