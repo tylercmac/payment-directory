@@ -59,10 +59,10 @@ module.exports = function abbrState(input, to) {
     for (let i = 0; i < states.length; i++) {
       if (states[i][0] === input) {
         return states[i][1];
-      } else if (input === 'Palau') {
-        return "Palau"
       }
     }
+    return input;
+    
   } else if (to === "name") {
     input = input.toUpperCase();
     for (let i = 0; i < states.length; i++) {
