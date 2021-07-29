@@ -1,5 +1,5 @@
 .lead {
-  font-size: calc(.3rem + 1vw);
+  font-size: 1rem;
   font-style: italic;
   max-width: 100%;
 }

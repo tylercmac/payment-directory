@@ -3,7 +3,7 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 import stateAbbr from "../stateAbbr"
 import "./style.css";
 
-export default function InfoModal({ Payee, Payment }, props) {
+export default function InfoModal({ Payee, Payment }) {
   const formatName =
   Payee.Name.charAt(0) +
   Payee.Name.substr(1, Payee.Name.length - 1).toLowerCase();
